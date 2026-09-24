@@ -4,11 +4,7 @@ import javax.swing.*;
 
 /*
   TODO:
-  1) Change credentials for your own team's database.
-  2) Change SQL command to a relevant query of table that retrieves a small amount of data.
-  3) Change column name to table's column name containing the data. 
-  4) Create a JTextArea object using the queried data.
-  5) Add the new object to the JPanel p.
+  1) Switch to Java FX
 */
 
 public class GUI extends JFrame implements ActionListener {
