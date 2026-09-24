@@ -22,7 +22,7 @@ public class GUI extends JFrame implements ActionListener {
       //TODO STEP 1 (see line 7)
       String database_name = "squad_44_db"; // edit value here
       String database_user = "squad_44"; // edit value here
-      String database_password = System.getenv("db_pass"); // edit value here
+      String database_password = dbSetup.pswd; // edit value here
 	  
       String database_url = String.format("jdbc:postgresql://csce-315-db.engr.tamu.edu/%s", database_name);
       try {
