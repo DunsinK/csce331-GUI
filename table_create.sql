@@ -13,13 +13,21 @@ create table supplies(
 
 create table purchases(
     purchase_id int primary key,
-    purchase_supply_id int not null,
-    purchase_quantity int not null,
     purchase_date date not null,
+    vendor_id int
+);
+
+create table purchase_supplies(
+    purchase_supply_id int primary key,
+    purchase_id int not null,
+    supply_id int not null,
+    purchase_quantity int not null,
     expiration_date date,
-    vendor_id int,
+    constraint fk_purchase_id
+        foreign key (purchase_id)
+        references purchases (purchase_id),
     constraint fk_supply_id
-        foreign key (purchase_supply_id)
+        foreign key (supply_id)
         references supplies (supply_id)
 );
 
