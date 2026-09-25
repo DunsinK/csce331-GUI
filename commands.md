@@ -1,0 +1,1 @@
+psql -h csce-315-db.engr.tamu.edu -U squad_44 -d squad_44_db
