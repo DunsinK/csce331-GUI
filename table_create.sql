@@ -39,3 +39,15 @@ create table sales(
         foreign key (sale_employee_id)
         references employees (employee_id)
 );
+
+create table sale_menu_items(
+    sale_menu_item_id int primary key,
+    sale_id int not null,
+    menu_item_id int not null,
+    constraint fk_sale_id
+        foreign key (sale_id)
+        references sales (sale_id),
+    constraint fk_menu_item_id
+        foreign key (menu_item_id)
+        references menu_items (menu_item_id)
+);
