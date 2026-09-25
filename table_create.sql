@@ -32,6 +32,7 @@ create table menu_items(
 
 create table sales(
     sale_id int primary key,
+    sale_date date not null,
     sale_price decimal(10,2) not null,
     sale_tip decimal(10,2) not null,
     sale_employee_id int not null,
